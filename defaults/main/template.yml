@@ -50,30 +50,42 @@ nginx_http_template:
     template_file: conf.d/magento2.conf
     conf_file_name: magento2.conf
     conf_file_location: /etc/nginx/conf.d/
-  magento2_status:
-    template_file: conf.d/magento2/status.conf
-    conf_file_name: status.conf
+  magento2_assets:
+    template_file: conf.d/magento2/assets.conf
+    conf_file_name: assets.conf
     conf_file_location: /etc/nginx/conf.d/magento2/
-  magento2_rabbitmq_proxy:
-    template_file: conf.d/magento2/rabbitmq_proxy.conf
-    conf_file_name: rabbitmq_proxy.conf
+  magento2_cors:
+    template_file: conf.d/magento2/cors.conf
+    conf_file_name: cors.conf
     conf_file_location: /etc/nginx/conf.d/magento2/
   magento2_extra_protect:
     template_file: conf.d/magento2/extra_protect.conf
     conf_file_name: extra_protect.conf
     conf_file_location: /etc/nginx/conf.d/magento2/
+  magento2_maintenance:
+    template_file: conf.d/magento2/maintenance.conf
+    conf_file_name: maintenance.conf
+    conf_file_location: /etc/nginx/conf.d/magento2/
   magento2_maps:
     template_file: conf.d/magento2/maps.conf
     conf_file_name: maps.conf
-    conf_file_location: /etc/nginx/conf.d/magento2/
-  magento2_assets:
-    template_file: conf.d/magento2/assets.conf
-    conf_file_name: assets.conf
     conf_file_location: /etc/nginx/conf.d/magento2/
   magento2_php_backend:
     template_file: conf.d/magento2/php_backend.conf
     conf_file_name: php_backend.conf
     conf_file_location: /etc/nginx/conf.d/magento2/
+  magento2_rabbitmq_proxy:
+    template_file: conf.d/magento2/rabbitmq_proxy.conf
+    conf_file_name: rabbitmq_proxy.conf
+    conf_file_location: /etc/nginx/conf.d/magento2/
+  magento2_status:
+    template_file: conf.d/magento2/status.conf
+    conf_file_name: status.conf
+    conf_file_location: /etc/nginx/conf.d/magento2/
+#  magento2_varnish_proxy:
+#    template_file: conf.d/magento2/varnish_proxy.conf
+#    conf_file_name: varnish_proxy.conf
+#    conf_file_location: /etc/nginx/conf.d/magento2/
 
 
 # Enable NGINX 'stub_status' data.

@@ -8,7 +8,7 @@ This role installs NGINX Open Source, NGINX Plus, the NGINX Amplify agent, or NG
 
 **Note:** This role is still in active development. There may be unidentified issues and the role variables may change as development continues.
 
-Changes made by [Maksold](https://github.com/maksold) for Magento 2.x compatibility
+Changes made by @Maksold for Magento 2.x compatibility
 ------------
 
 **Default variables**
@@ -28,6 +28,7 @@ The following files are new or has changes:
 -   **templates/conf.d/default.conf:** Default server block to ignore non-existing server names
 -   **templates/conf.d/magento2.conf:** Magento 2 server config
 -   **templates/conf.d/magento2/assets.conf:** Manage /static and /media URIs
+-   **templates/conf.d/magento2/cors.conf:** Cross-Origin Resource Sharing (CORS) config ([more details](https://enable-cors.org/)
 -   **templates/conf.d/magento2/extra_protect.conf:** Deny access to specific files and limit_req (zone1, zone2, zone3) for specific URIs
 -   **templates/conf.d/magento2/maintenance.conf:** Allow to enable maintenance mode
 -   **templates/conf.d/magento2/maps.conf:** Maping for PHP-FPM pass route, HTTP auth, multi shop code configuration, good/bad user agents
