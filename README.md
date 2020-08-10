@@ -34,7 +34,13 @@ The following files are new or has changes:
 -   **templates/conf.d/magento2/php_backend.conf:** Add headers for php and configure fastcgi params
 -   **templates/conf.d/magento2/rabbitmq_proxy.conf:** RabbitMQ proxy (like /rabbitmq/*)
 -   **templates/conf.d/magento2/status.conf:** Server status for localhost (like /nginx_status, /status, /ping)
--   **templates/conf.d/magento2/varnish_proxy.conf:** Varnish proxy config (pass, headers, timeout)
+-   **templates/conf.d/magento2/varnish_proxy.conf:** Varnish proxy config (pass, headers, timeout) **Temporary disabled!**
+
+**Tasks**
+
+The following files has changes:
+
+-   **tasks/conf/logrotate.yml:** Ignore errors for Logrotate run
 
 Requirements
 ------------

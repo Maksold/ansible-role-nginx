@@ -36,3 +36,4 @@
 - name: "(Config: All OSs) Run Logrotate"
   command: logrotate -f /etc/logrotate.d/nginx
   changed_when: nginx_logrotate_result.changed
+  ignore_errors: true
