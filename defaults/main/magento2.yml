@@ -1,0 +1,20 @@
+---
+# Main configs
+nginx_domains:
+  - www.example.com
+  - example.com
+nginx_root: "/var/www/current/"
+nginx_webuser_name: www-data
+
+# SSL configs
+nginx_ssl_enabled: false
+nginx_acme_challenge_enabled: true
+
+# Auth basic
+nginx_auth_basic_enabled: false
+nginx_auth_basic_file: "{{ nginx_root }}/.htpasswd"
+nginx_auth_basic_user: "user"
+nginx_auth_basic_password: "zaq123"
+
+# Proxy configs
+nginx_rabbitmq_proxy_enabled: false
