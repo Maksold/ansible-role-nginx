@@ -8,6 +8,34 @@ This role installs NGINX Open Source, NGINX Plus, the NGINX Amplify agent, or NG
 
 **Note:** This role is still in active development. There may be unidentified issues and the role variables may change as development continues.
 
+Changes made by [Maksold](https://github.com/maksold) for Magento 2.x compatibility
+------------
+
+**Default variables**
+
+The following files are new or has changes:
+
+-   **defaults/main/template.yml:** Remove unnecessary variables, enable nginx_main_template, nginx_http_template by default.
+-   **defaults/main/magento2.yml:** Add variables for Magento 2 specific templates.
+-   **defaults/main/logrotate.yml:** Enable logrotate by default and changed logrotate options.
+
+**Templates**
+
+The following files are new or has changes:
+
+-   **templates/nginx.conf.j2:** Totally replace main nginx config file 
+-   **templates/fastcgi_params:** Add fastcgi params
+-   **templates/conf.d/default.conf:** Default server block to ignore non-existing server names
+-   **templates/conf.d/magento2.conf:** Magento 2 server config
+-   **templates/conf.d/magento2/assets.conf:** Manage /static and /media URIs
+-   **templates/conf.d/magento2/extra_protect.conf:** Deny access to specific files and limit_req (zone1, zone2, zone3) for specific URIs
+-   **templates/conf.d/magento2/maintenance.conf:** Allow to enable maintenance mode
+-   **templates/conf.d/magento2/maps.conf:** Maping for PHP-FPM pass route, HTTP auth, multi shop code configuration, good/bad user agents
+-   **templates/conf.d/magento2/php_backend.conf:** Add headers for php and configure fastcgi params
+-   **templates/conf.d/magento2/rabbitmq_proxy.conf:** RabbitMQ proxy (like /rabbitmq/*)
+-   **templates/conf.d/magento2/status.conf:** Server status for localhost (like /nginx_status, /status, /ping)
+-   **templates/conf.d/magento2/varnish_proxy.conf:** Varnish proxy config (pass, headers, timeout)
+
 Requirements
 ------------
 
