@@ -18,3 +18,4 @@ nginx_auth_basic_password: "zaq123"
 
 # Proxy configs
 nginx_rabbitmq_proxy_enabled: false
+nginx_rabbitmq_proxy_pass: "m2rabbitmq"
