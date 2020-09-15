@@ -107,12 +107,12 @@ http {
     ## Get real ip from proxy
     set_real_ip_from 127.0.0.1;
 
-    ## ROUTE TO BACKEND NODES
-#    upstream php-backend {
+    ## ROUTE TO PHP BACKEND NODES
+    upstream php_upstream {
 #       hash $remote_addr consistent;
 #       least_conn;
-#       include /etc/nginx/backend.conf;
-#    }
+       server 127.0.0.1:8080;
+    }
 
     ## ROUTE TO ADMIN NODE
 #    upstream admin {
@@ -122,9 +122,11 @@ http {
 #       server 10.x.x.x;
 #    }
 
-#    upstream varnish {
-#        server {{ nginx_varnish_proxy_ip }}:{{ nginx_varnish_proxy_port }};
-#    }
+    {% if nginx_varnish_proxy_enabled %}
+    upstream varnish_upstream {
+        server {{ nginx_varnish_proxy_ip }}:{{ nginx_varnish_proxy_port }};
+    }
+    {% endif %}
 
     ## Main domain configuration
     include /etc/nginx/conf.d/*.conf;

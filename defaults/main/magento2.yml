@@ -16,6 +16,11 @@ nginx_auth_basic_file: "{{ nginx_root }}/.htpasswd"
 nginx_auth_basic_user: "user"
 nginx_auth_basic_password: "zaq123"
 
-# Proxy configs
+# RabbitMQ proxy config
 nginx_rabbitmq_proxy_enabled: false
 nginx_rabbitmq_proxy_pass: "m2rabbitmq"
+
+# Varnish proxy config
+nginx_varnish_proxy_enabled: false
+nginx_varnish_proxy_ip: "127.0.0.1"
+nginx_varnish_proxy_port: "6081"
