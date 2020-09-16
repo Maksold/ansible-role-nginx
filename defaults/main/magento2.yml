@@ -18,7 +18,7 @@ nginx_auth_basic_password: "zaq123"
 
 # RabbitMQ proxy config
 nginx_rabbitmq_proxy_enabled: false
-nginx_rabbitmq_proxy_pass: "m2rabbitmq"
+nginx_rabbitmq_proxy_path: "m2rabbitmq"
 
 # Varnish proxy config
 nginx_varnish_proxy_enabled: false
