@@ -21,6 +21,12 @@ nginx_rabbitmq_proxy_enabled: false
 nginx_rabbitmq_proxy_path: "m2rabbitmq"
 nginx_rabbitmq_proxy_pass: "http://127.0.0.1:15672"
 
+# Supervisor proxy config
+nginx_supervisor_proxy_enabled: true
+nginx_supervisor_proxy_path: "m2supervisor"
+nginx_supervisor_proxy_ip: "127.0.0.1"
+nginx_supervisor_proxy_port: "9001"
+
 # Varnish proxy config
 nginx_varnish_proxy_enabled: false
 nginx_varnish_proxy_ip: "127.0.0.1"

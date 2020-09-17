@@ -78,6 +78,10 @@ nginx_http_template:
     template_file: conf.d/magento2/rabbitmq_proxy.conf
     conf_file_name: rabbitmq_proxy.conf
     conf_file_location: /etc/nginx/conf.d/magento2/
+  magento2_supervisor_proxy:
+    template_file: conf.d/magento2/supervisor_proxy.conf
+    conf_file_name: supervisor_proxy.conf
+    conf_file_location: /etc/nginx/conf.d/magento2/
   magento2_status:
     template_file: conf.d/magento2/status.conf
     conf_file_name: status.conf

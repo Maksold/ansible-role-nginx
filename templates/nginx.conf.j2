@@ -122,6 +122,12 @@ http {
 #       server 10.x.x.x;
 #    }
 
+    {% if nginx_supervisor_proxy_enabled %}
+    upstream supervisor_upstream {
+        server {{ nginx_supervisor_proxy_ip }}:{{ nginx_supervisor_proxy_port }};
+    }
+    {% endif %}
+
     {% if nginx_varnish_proxy_enabled %}
     upstream varnish_upstream {
         server {{ nginx_varnish_proxy_ip }}:{{ nginx_varnish_proxy_port }};
