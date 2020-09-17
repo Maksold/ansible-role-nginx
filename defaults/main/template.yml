@@ -30,7 +30,12 @@ nginx_main_template:
     access_log_location:
       - name: main
         location: /var/log/nginx/access.log
-    keepalive_timeout: 65
+
+nginx_main_template_keepalive_timeout: 65
+nginx_main_template_client_max_body_size: 64m
+nginx_main_template_client_body_buffer_size: 128k
+nginx_main_template_client_header_buffer_size: 16k
+nginx_main_template_large_client_header_buffers: 4 16k
 
 
 # Enable creating dynamic templated NGINX HTTP configuration files.

@@ -54,7 +54,7 @@ http {
 {% endfor %}
     error_log  {{ nginx_main_template.error_log.location | default("/var/log/nginx/error.log") }} {{ nginx_main_template.error_log.level | default("warn") }};
 
-    keepalive_timeout   {{ nginx_main_template.http_settings.keepalive_timeout }};
+    keepalive_timeout   {{ nginx_main_template_keepalive_timeout }};
     autoindex		    off;
     server_tokens       off;
     port_in_redirect	off;
@@ -62,10 +62,10 @@ http {
     tcp_nopush          on;
     tcp_nodelay         on;
 
-    client_max_body_size    64m;
-    client_body_buffer_size 128k;
-    client_header_buffer_size 16k;
-    large_client_header_buffers 4 16k;
+    client_max_body_size    {{ nginx_main_template_client_max_body_size }};
+    client_body_buffer_size {{ nginx_main_template_client_body_buffer_size }};
+    client_header_buffer_size {{ nginx_main_template_client_header_buffer_size }};
+    large_client_header_buffers {{ nginx_main_template_large_client_header_buffers }};
 
     fastcgi_buffer_size 16k;
     fastcgi_buffers 4 16k;
