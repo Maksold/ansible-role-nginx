@@ -34,3 +34,7 @@ nginx_supervisor_proxy_port: "9001"
 nginx_varnish_proxy_enabled: false
 nginx_varnish_proxy_ip: "127.0.0.1"
 nginx_varnish_proxy_port: "6081"
+
+# Config template file paths
+nginx_confd_default_template_src: conf.d/default.conf
+nginx_confd_magento2_template_src: conf.d/magento2.conf

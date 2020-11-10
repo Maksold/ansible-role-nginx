@@ -48,12 +48,12 @@ nginx_http_template:
     conf_file_name: fastcgi_params
     conf_file_location: /etc/nginx/
   default:
-    template_file: conf.d/default.conf
-    conf_file_name: default.conf
+    template_file: "{{ nginx_confd_default_template_src }}"
+    conf_file_name: "{{ nginx_confd_default_template_src | basename }}"
     conf_file_location: /etc/nginx/conf.d/
   magento2:
-    template_file: conf.d/magento2.conf
-    conf_file_name: magento2.conf
+    template_file: "{{ nginx_confd_magento2_template_src }}"
+    conf_file_name: "{{ nginx_confd_magento2_template_src | basename }}"
     conf_file_location: /etc/nginx/conf.d/
   magento2_assets:
     template_file: conf.d/magento2/assets.conf
