@@ -91,14 +91,14 @@ nginx_http_template:
     template_file: conf.d/magento2/status.conf
     conf_file_name: status.conf
     conf_file_location: /etc/nginx/conf.d/magento2/
-  magento2_php_proxy:
-    template_file: conf.d/magento2/php_proxy.conf
-    conf_file_name: php_proxy.conf
-    conf_file_location: /etc/nginx/conf.d/magento2/
-  magento2_varnish_proxy:
-    template_file: conf.d/magento2/varnish_proxy.conf
-    conf_file_name: varnish_proxy.conf
-    conf_file_location: /etc/nginx/conf.d/magento2/
+#  magento2_php_proxy:
+#    template_file: conf.d/magento2/php_proxy.conf
+#    conf_file_name: php_proxy.conf
+#    conf_file_location: /etc/nginx/conf.d/magento2/
+#  magento2_varnish_proxy:
+#    template_file: conf.d/magento2/varnish_proxy.conf
+#    conf_file_name: varnish_proxy.conf
+#    conf_file_location: /etc/nginx/conf.d/magento2/
 
 
 # Enable NGINX 'stub_status' data.
