@@ -3,6 +3,8 @@
 nginx_domains:
   - www.example.com
   - example.com
+nginx_main_domain: "{{ nginx_domains | first }}"
+nginx_server_name: "{{ nginx_domains | join(' ') }}"
 nginx_root: "/var/www/current/"
 nginx_webuser_name: www-data
 
