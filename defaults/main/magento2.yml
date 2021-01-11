@@ -7,6 +7,7 @@ nginx_main_domain: "{{ nginx_domains | first }}"
 nginx_server_name: "{{ nginx_domains | join(' ') }}"
 nginx_root: "/var/www/current/"
 nginx_webuser_name: www-data
+nginx_executable_php_files: "(index|elastic|health_check|get|static|errors/(report|404|503))"
 
 # SSL configs
 nginx_ssl_enabled: false
