@@ -25,6 +25,6 @@ fastcgi_param  SERVER_NAME        $server_name;
 fastcgi_param  REDIRECT_STATUS    200;
 
 # magento timeouts
-fastcgi_connect_timeout 65;
-fastcgi_send_timeout 7200;
-fastcgi_read_timeout 7200;
+fastcgi_connect_timeout 65s;
+fastcgi_send_timeout 600s;
+fastcgi_read_timeout 600s;
